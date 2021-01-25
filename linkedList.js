@@ -24,7 +24,7 @@ class LinkedList {
   get getLast() {
     let node = this.head;
     if (node) {
-      while (node) {
+      while (node.next) {
         node = node.next;
       }
     }
@@ -41,8 +41,8 @@ node1.next = node2;
 
 const list = new LinkedList(node1);
 
-// console.log(list.size);
+console.log(list.size);
 console.log(list.getLast);
-// console.log(list.getFirst);
-// list.clear();
-// console.log(list.size);
+console.log(list.getFirst);
+list.clear();
+console.log(list.size);
